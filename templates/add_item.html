@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Add New Item</h2>
+<form method="POST">
+    <label for="itemID">Item ID:</label><br>
+    <input type="text" id="itemID" name="itemID" required><br>
+    <label for="itemName">Item Name:</label><br>
+    <input type="text" id="itemName" name="itemName" required><br>
+    <label for="category">Category:</label><br>
+    <select id="category" name="category" required>
+        <option value="hot drink">Hot Drink</option>
+        <option value="iced drink">Iced Drink</option>
+        <option value="frapped drink">Frapped Drink</option>
+        <option value="cake">Cake</option>
+    </select><br>
+    <label for="sizeOption">Size Option:</label><br>
+    <select id="sizeOption" name="sizeOption">
+        <option value="S">Small</option>
+        <option value="L">Large</option>
+        <option value="">None</option>
+    </select><br>
+    <label for="price">Price:</label><br>
+    <input type="text" id="price" name="price" required><br><br>
+    <input type="submit" value="Add Item">
+</form>
+{% endblock %}
