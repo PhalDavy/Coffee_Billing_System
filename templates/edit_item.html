@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Edit Item</h2>
+<form method="POST">
+    <label for="itemID">Item ID:</label><br>
+    <input type="text" id="itemID" name="itemID" value="{{ item.itemID }}" readonly><br>
+    <label for="itemName">Item Name:</label><br>
+    <input type="text" id="itemName" name="itemName" value="{{ item.itemName }}" required><br>
+    <label for="category">Category:</label><br>
+    <select id="category" name="category" required>
+        <option value="hot drink" {% if item.category == 'hot drink' %}selected{% endif %}>Hot Drink</option>
+        <option value="iced drink" {% if item.category == 'iced drink' %}selected{% endif %}>Iced Drink</option>
+        <option value="frapped drink" {% if item.category == 'frapped drink' %}selected{% endif %}>Frapped Drink</option>
+        <option value="cake" {% if item.category == 'cake' %}selected{% endif %}>Cake</option>
+    </select><br>
+    <label for="sizeOption">Size Option:</label><br>
+    <select id="sizeOption" name="sizeOption">
+        <option value="S" {% if item.sizeOption == 'S' %}selected{% endif %}>Small</option>
+        <option value="L" {% if item.sizeOption == 'L' %}selected{% endif %}>Large</option>
+        <option value="" {% if item.sizeOption == '' %}selected{% endif %}>None</option>
+    </select><br>
+    <label for="price">Price:</label><br>
+    <input type="text" id="price" name="price" value="{{ item.price }}" required><br><br>
+    <input type="submit" value="Update Item">
+</form>
+{% endblock %}
