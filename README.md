@@ -30,20 +30,10 @@ Before running the script, make sure you have the following installed:
 3. **Run the script:**
    - download 
    - activate the environment: .venv\Scripts\activate
-   - Make some changes:
+   - Make some changes in **def get_db_connection()**
      - host: based on your host in DBeaver
      - user: based on user name in DBeaver
      - password: based on your password in MySQL Workbench
      - database: your database name
-     ```bash
-    def get_db_connection():
-    connection = mysql.connector.connect(
-        host='localhost1',
-        user='root',
-        password='youare168',
-        database='billing'
-    )
-    return connection
-     ```
    - run: python app.py
    
