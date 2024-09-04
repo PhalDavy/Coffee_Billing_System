@@ -13,7 +13,7 @@ Before running the script, make sure you have the following installed:
      Example: billing
     - insert **pos.sql** into your created database
     - run database
-5. Libraries:
+5. **Libraries**:
    ```bash
    pip install -r requirement.txt
    ```
