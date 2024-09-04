@@ -28,7 +28,6 @@ Before running the script, make sure you have the following installed:
    cd path_to_your_cloned_directory
    ```
 3. **Run the script:**
-   - download 
    - activate the environment: .venv\Scripts\activate
    - Make some changes in **def get_db_connection()**
      - host: based on your host in DBeaver
